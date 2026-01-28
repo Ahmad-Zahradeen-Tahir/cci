@@ -2,6 +2,15 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Link } from "wouter";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogDescription, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogTrigger 
+} from "@/components/ui/dialog";
+import { Info } from "lucide-react";
 
 const projects = [
   {
@@ -97,12 +106,49 @@ export default function Projects() {
                   <p className="text-slate-600 mb-6 flex-grow">
                     {project.description}
                   </p>
-                  <Link href="/contact">
-                    <Button variant="outline" size="sm" className="w-full justify-between group-hover:bg-primary group-hover:text-white group-hover:border-primary">
-                      Support This
-                      <span className="text-lg">→</span>
-                    </Button>
-                  </Link>
+                  
+                  <div className="grid grid-cols-2 gap-3">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" size="sm" className="gap-2">
+                          <Info className="w-4 h-4" />
+                          Details
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-2xl">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl font-display">{project.title}</DialogTitle>
+                          <DialogDescription className="text-primary font-bold uppercase tracking-wider text-xs">
+                            {project.category}
+                          </DialogDescription>
+                        </DialogHeader>
+                        <div className="space-y-6 pt-4">
+                          <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
+                            <img 
+                              src={project.image} 
+                              alt={project.title} 
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div className="space-y-4">
+                            <p className="text-slate-600 leading-relaxed text-lg">
+                              {project.description}
+                            </p>
+                            <p className="text-slate-500 italic">
+                              Additional details about this project's implementation and specific milestones achieved in the region.
+                            </p>
+                          </div>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+
+                    <Link href="/contact">
+                      <Button variant="outline" size="sm" className="w-full justify-between group-hover:bg-primary group-hover:text-white group-hover:border-primary">
+                        Support
+                        <span className="text-lg">→</span>
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}
