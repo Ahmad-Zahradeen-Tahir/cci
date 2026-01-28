@@ -192,6 +192,11 @@ export default function Projects() {
                                     Expanding to three new states in the coming year.
                                   </li>
                                 </ul>
+                                <Link href="/contact" className="block mt-6">
+                                  <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6 rounded-xl shadow-lg shadow-primary/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                                    Donate to this Project
+                                  </Button>
+                                </Link>
                               </div>
                             </div>
                           </div>
