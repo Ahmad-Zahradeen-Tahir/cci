@@ -17,6 +17,7 @@ const projects = [
   {
     title: "Rural Screening Camps",
     category: "Outreach",
+    shortDescription: "Bringing free cervical and breast cancer screening to remote villages in Northern Nigeria.",
     description: "Bringing free cervical and breast cancer screening to remote villages in Northern Nigeria. Our medical teams travel to hard-to-reach areas, providing essential diagnostic services to women who otherwise have no access to oncology care. Each camp serves approximately 200-300 women, offering not just screenings but also critical education on self-examination and lifestyle changes to reduce risk. We provide immediate counseling and follow-up referrals for those with suspicious findings, ensuring no one is left behind in the diagnostic process.",
     image: "https://images.unsplash.com/photo-1576091160550-217358c7db81?w=800&q=80",
     gallery: [
@@ -27,6 +28,7 @@ const projects = [
   {
     title: "School Awareness Drives",
     category: "Education",
+    shortDescription: "Educating high school students about lifestyle choices and early warning signs.",
     description: "Educating high school students about lifestyle choices and early warning signs. Our youth-focused programs aim to instill healthy habits from an early age, debunking common myths about cancer in the local community. We use interactive workshops, peer-led discussions, and modern digital tools to engage students. The curriculum covers the importance of nutrition, physical activity, and the dangers of tobacco and alcohol consumption. By empowering the youth, we create ambassadors for health within their own families and neighborhoods.",
     image: "https://images.unsplash.com/photo-1544717302-de2939b7ef71?w=800&q=80",
     gallery: [
@@ -37,6 +39,7 @@ const projects = [
   {
     title: "Patient Support Fund",
     category: "Financial Aid",
+    shortDescription: "Providing financial assistance for chemotherapy and radiotherapy for low-income patients.",
     description: "Providing financial assistance for chemotherapy and radiotherapy for low-income patients. Cancer treatment costs are often prohibitive for families in Nigeria, leading to catastrophic health expenditures. CCI's support fund steps in to cover essential treatment costs, transport to oncology centers, and basic nutritional support during recovery. We work closely with hospitals to identify the most vulnerable patients, ensuring that financial status is never a barrier to life-saving treatment. Our fund has supported hundreds of patients through their full course of therapy.",
     image: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=800&q=80",
     gallery: [
@@ -47,6 +50,7 @@ const projects = [
   {
     title: "Pink October Walk",
     category: "Advocacy",
+    shortDescription: "Annual walkathon to raise awareness and funds for breast cancer research.",
     description: "Annual walkathon to raise awareness and funds for breast cancer research. Every October, CCI organizes one of the largest advocacy events in the country, bringing together survivors, families, and supporters. The walk serves as a powerful symbol of solidarity and a platform to call for better cancer policies. Funds raised during the event are channeled directly into our community programs and research initiatives. It's a day of hope, celebration of life, and a renewal of our commitment to a cancer-free Nigeria.",
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
     gallery: [
@@ -57,6 +61,7 @@ const projects = [
   {
     title: "Oncology Training",
     category: "Capacity Building",
+    shortDescription: "Training nurses and local health workers in palliative care and patient management.",
     description: "Training nurses and local health workers in palliative care and patient management. Recognizing the shortage of specialized oncology staff, CCI provides professional development opportunities for frontline health workers. Our training modules include pain management, psychological support for patients and families, and early detection techniques. By strengthening the capacity of the local health workforce, we improve the quality of care available at the community level. Certified trainees become focal points for cancer care in their respective health centers.",
     image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
     gallery: [
@@ -67,6 +72,7 @@ const projects = [
   {
     title: "Research & Data",
     category: "Science",
+    shortDescription: "Collecting data on cancer prevalence to inform national health policy.",
     description: "Collecting data on cancer prevalence to inform national health policy. CCI's research arm focuses on understanding the specific challenges and trends of cancer in the Nigerian context. We conduct community surveys, collaborate with teaching hospitals for clinical data analysis, and publish findings to guide public health interventions. Our goal is to provide evidence-based recommendations to the Ministry of Health, advocating for more localized and effective cancer control strategies. Accurate data is the foundation of every successful health initiative.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
     gallery: [
@@ -129,7 +135,7 @@ export default function Projects() {
                     {project.title}
                   </h3>
                   <p className="text-slate-600 mb-6 flex-grow">
-                    {project.description}
+                    {project.shortDescription}
                   </p>
                   
                   <div className="grid grid-cols-2 gap-3">
