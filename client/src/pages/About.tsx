@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { Users, Award, History, Target } from "lucide-react";
+import { Link } from "wouter";
+import { Users, Award, History, Target, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -163,6 +165,19 @@ export default function About() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 text-center"
+          >
+            <Link href="/staff">
+              <Button size="lg" className="gap-2">
+                View All Staff <ArrowRight className="w-4 h-4" />
+              </Button>
+            </Link>
+          </motion.div>
         </div>
       </section>
     </>
