@@ -146,14 +146,14 @@ export default function Projects() {
                           Details
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="sm:max-w-2xl max-h-[90vh] flex flex-col p-0 overflow-hidden">
-                        <DialogHeader className="p-6 pb-0">
+                      <DialogContent className="sm:max-w-2xl h-[80vh] flex flex-col p-0 overflow-hidden">
+                        <DialogHeader className="p-6 pb-0 flex-shrink-0">
                           <DialogTitle className="text-2xl font-display">{project.title}</DialogTitle>
                           <DialogDescription className="text-primary font-bold uppercase tracking-wider text-xs">
                             {project.category}
                           </DialogDescription>
                         </DialogHeader>
-                        <ScrollArea className="flex-grow p-6">
+                        <div className="flex-grow overflow-y-auto p-6">
                           <div className="space-y-6">
                             <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                               <img 
@@ -162,7 +162,7 @@ export default function Projects() {
                                 className="w-full h-full object-cover"
                               />
                             </div>
-                            <div className="space-y-4">
+                            <div className="space-y-4 pb-4">
                               <p className="text-slate-600 leading-relaxed text-lg">
                                 {project.description}
                               </p>
@@ -195,7 +195,7 @@ export default function Projects() {
                               </div>
                             </div>
                           </div>
-                        </ScrollArea>
+                        </div>
                       </DialogContent>
                     </Dialog>
 
